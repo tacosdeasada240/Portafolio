@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portafolio de Kaleb Buelna Aguilar, estudiante de Redes en Tecnologías de la Información e Innovación Digital.">
+    <title>Kaleb Buelna Aguilar | Portafolio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor encabezado-barra">
+            <a class="marca" href="#inicio">Kaleb Buelna</a>
+            <div class="controles">
+                <div class="idiomas">
+                    <button class="boton-idioma activo" data-idioma="es" type="button">ES</button>
+                    <button class="boton-idioma" data-idioma="en" type="button">EN</button>
+                    <button class="boton-idioma" data-idioma="de" type="button">DE</button>
+                </div>
+                <button id="boton-tema" class="boton-tema" type="button">Claro</button>
+            </div>
+        </div>
+        <nav class="menu" aria-label="Navegación principal">
+            <ul class="contenedor">
+                <li><a href="#inicio" data-texto="inicio">Inicio</a></li>
+                <li><a href="#sobre-mi" data-texto="sobre_mi">Sobre mí</a></li>
+                <li><a href="#proyectos" data-texto="proyectos">Proyectos</a></li>
+                <li><a href="#habilidades" data-texto="habilidades">Habilidades</a></li>
+                <li><a href="#contacto" data-texto="contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="seccion">
+            <div class="contenedor inicio-contenido">
+                <img class="foto-perfil" src="imagenes/perfil.jpg" alt="Foto de perfil de Kaleb Buelna Aguilar" width="160" height="160">
+                <div>
+                    <p class="etiqueta" data-texto="etiqueta">Estudiante de Redes</p>
+                    <h1>Kaleb Buelna Aguilar</h1>
+                    <p class="resumen" data-texto="resumen">Diseño y simulo infraestructuras de red con VLANs, direccionamiento IP, IoT y VoIP.</p>
+                    <div class="botones">
+                        <a class="boton" href="#proyectos" data-texto="ver_proyectos">Ver proyectos</a>
+                        <a class="boton boton-secundario" href="cv.pdf" download data-texto="descargar_cv">Descargar CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="seccion">
+            <div class="contenedor">
+                <h2 data-texto="sobre_mi">Sobre mí</h2>
+                <p class="texto-corto" data-texto="sobre_mi_texto">Soy estudiante de cuarto semestre de Tecnologías de la Información e Innovación Digital en la Universidad Politécnica de Sinaloa. Espero egresar en 2028. Me gusta explorar cómo funciona el hardware y sus especificaciones, y en mi tiempo libre aprendo alemán por mi cuenta y juego videojuegos.</p>
+                <h3 class="subtitulo" data-texto="idiomas">Idiomas</h3>
+                <ul class="lista-etiquetas">
+                    <li data-texto="idioma_es">Español</li>
+                    <li data-texto="idioma_en">Inglés</li>
+                    <li data-texto="idioma_de">Alemán</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="proyectos" class="seccion">
+            <div class="contenedor">
+                <h2 data-texto="proyectos">Proyectos</h2>
+
+                <article class="proyecto proyecto-principal">
+                    <img class="proyecto-imagen" src="imagenes/topologia.png" alt="Topología en estrella de la red de un edificio, hecha en Cisco Packet Tracer" width="452" height="521">
+                    <div class="proyecto-texto">
+                        <h3 data-texto="infra_titulo">Infraestructura de red de un edificio de la UPSIN</h3>
+                        <p class="tecnologias">Cisco Packet Tracer · VLANs · IoT · VoIP</p>
+                        <p data-texto="infra_texto1">Recreación de la infraestructura de red de un edificio de la UPSIN en Cisco Packet Tracer. La topología es en estrella y conecta switches, routers y servidores de DHCP, DNS, correo y HTTP, además de dispositivos IoT como cámaras web y un monitor de temperatura.</p>
+                        <p data-texto="infra_texto2">El direccionamiento parte de la red 172.16.0.0 y se divide en diez VLAN con subredes de distinto tamaño, de /22 a /28.</p>
+                        <a class="boton" href="https://github.com/tacosdeasada240/Recreacion-de-topologia-UPSIN" target="_blank" rel="noopener" data-texto="ver_github">Ver en GitHub</a>
+                    </div>
+                </article>
+
+                <div class="proyectos-secundarios">
+                    <article class="proyecto">
+                        <h3>Librería de Alejandría</h3>
+                        <p class="tecnologias">HTML · CSS</p>
+                        <p data-texto="libreria_texto">Prototipo de tienda en línea de libros hecho solo con HTML y CSS. Incluye una página de inicio con categorías y un catálogo con tarjetas de producto.</p>
+                        <a class="boton boton-secundario" href="https://github.com/tacosdeasada240/Libreria/tree/main" target="_blank" rel="noopener" data-texto="ver_github">Ver en GitHub</a>
+                    </article>
+
+                    <article class="proyecto">
+                        <h3 data-texto="tabla_titulo">Tabla periódica</h3>
+                        <p class="tecnologias">HTML · CSS</p>
+                        <p data-texto="tabla_texto">Prototipo de diseño visual con los 118 elementos organizados por periodos y grupos, con un color distinto para cada familia química.</p>
+                        <a class="boton boton-secundario" href="https://github.com/tacosdeasada240/Tabla-periodica" target="_blank" rel="noopener" data-texto="ver_github">Ver en GitHub</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="seccion">
+            <div class="contenedor">
+                <h2 data-texto="habilidades">Habilidades</h2>
+                <div class="grupos-habilidades">
+                    <div class="grupo">
+                        <h3 data-texto="redes">Redes</h3>
+                        <ul class="lista-etiquetas">
+                            <li data-texto="h_direccionamiento">Direccionamiento IP y subredes</li>
+                            <li data-texto="h_vlans">Configuración de VLANs</li>
+                            <li data-texto="h_servicios">Servicios de red (DHCP, DNS, correo y HTTP)</li>
+                            <li data-texto="h_iot">Dispositivos IoT y VoIP</li>
+                            <li data-texto="h_simulacion">Simulación con Cisco Packet Tracer</li>
+                        </ul>
+                    </div>
+                    <div class="grupo">
+                        <h3 data-texto="desarrollo_web">Desarrollo web</h3>
+                        <ul class="lista-etiquetas">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                    <div class="grupo">
+                        <h3 data-texto="herramientas">Herramientas</h3>
+                        <ul class="lista-etiquetas">
+                            <li data-texto="h_git">Git y GitHub</li>
+                            <li>Visual Studio Code</li>
+                            <li>Windows</li>
+                        </ul>
+                    </div>
+                    <div class="grupo">
+                        <h3 data-texto="habilidades_blandas">Habilidades blandas</h3>
+                        <ul class="lista-etiquetas">
+                            <li data-texto="s_problemas">Resolución de problemas</li>
+                            <li data-texto="s_autodidacta">Aprendizaje autodidacta</li>
+                            <li data-texto="s_equipo">Trabajo en equipo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion">
+            <div class="contenedor">
+                <h2 data-texto="contacto">Contacto</h2>
+                <p class="texto-corto" data-texto="contacto_texto">¿Quieres conversar sobre redes o proyectos? Escríbeme.</p>
+                <div class="botones botones-contacto">
+                    <a class="boton" href="mailto:buelnakaleb47@gmail.com" data-texto="enviar_correo">Enviar correo</a>
+                    <a class="boton boton-secundario" href="https://github.com/tacosdeasada240" target="_blank" rel="noopener">GitHub</a>
+                    <a class="boton boton-secundario" href="https://www.linkedin.com/in/kaleb-buelna-4141a7449/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+                <p class="correo">buelnakaleb47@gmail.com</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>© 2026 Kaleb Buelna Aguilar</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
