@@ -67,7 +67,7 @@ h1 {
 
 h2 {
     font-size: 26px;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
 }
 
 .contenedor {
@@ -78,12 +78,12 @@ h2 {
 }
 
 .seccion {
-    padding: 56px 0px;
+    padding: 32px 0px;
 }
 
 .texto-corto {
     max-width: 640px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .subtitulo {
@@ -254,7 +254,7 @@ h2 {
 }
 
 .proyecto {
-    padding: 20px;
+    padding: 16px;
     border: 1px solid var(--borde);
     border-radius: 12px;
     background-color: var(--tarjeta);
@@ -329,6 +329,7 @@ h2 {
 
     h2 {
         font-size: 32px;
+        margin-bottom: 24px;
     }
 
     .seccion {
