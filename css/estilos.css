@@ -248,9 +248,10 @@ h2 {
 .lista-etiquetas li {
     padding: 6px 12px;
     border: 1px solid var(--borde);
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: var(--tarjeta);
     font-size: 14px;
+    line-height: 1.4;
 }
 
 .proyecto {
@@ -322,7 +323,7 @@ h2 {
     text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     h1 {
         font-size: 48px;
     }
@@ -405,10 +406,11 @@ h2 {
 
     .grupos-habilidades {
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .grupo {
-        flex: 1;
+        flex: 1 1 45%;
     }
 }
 
