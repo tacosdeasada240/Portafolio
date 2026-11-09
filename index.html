@@ -11,24 +11,27 @@
     <header class="encabezado">
         <div class="contenedor encabezado-barra">
             <a class="marca" href="#inicio">Kaleb Buelna</a>
-            <div class="controles">
-                <div class="idiomas">
-                    <button class="boton-idioma activo" data-idioma="es" type="button">ES</button>
-                    <button class="boton-idioma" data-idioma="en" type="button">EN</button>
-                    <button class="boton-idioma" data-idioma="de" type="button">DE</button>
+
+            <button id="boton-menu" class="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+            <nav id="menu" class="menu" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#inicio" data-texto="inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi" data-texto="sobre_mi">Sobre mí</a></li>
+                    <li><a href="#proyectos" data-texto="proyectos">Proyectos</a></li>
+                    <li><a href="#habilidades" data-texto="habilidades">Habilidades</a></li>
+                    <li><a href="#contacto" data-texto="contacto">Contacto</a></li>
+                </ul>
+                <div class="controles">
+                    <div class="idiomas">
+                        <button class="boton-idioma activo" data-idioma="es" type="button">ES</button>
+                        <button class="boton-idioma" data-idioma="en" type="button">EN</button>
+                        <button class="boton-idioma" data-idioma="de" type="button">DE</button>
+                    </div>
+                    <button id="boton-tema" class="boton-tema" type="button">Claro</button>
                 </div>
-                <button id="boton-tema" class="boton-tema" type="button">Claro</button>
-            </div>
+            </nav>
         </div>
-        <nav class="menu" aria-label="Navegación principal">
-            <ul class="contenedor">
-                <li><a href="#inicio" data-texto="inicio">Inicio</a></li>
-                <li><a href="#sobre-mi" data-texto="sobre_mi">Sobre mí</a></li>
-                <li><a href="#proyectos" data-texto="proyectos">Proyectos</a></li>
-                <li><a href="#habilidades" data-texto="habilidades">Habilidades</a></li>
-                <li><a href="#contacto" data-texto="contacto">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>

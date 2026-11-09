@@ -160,3 +160,28 @@ botonTema.addEventListener("click", function () {
     document.body.classList.toggle("claro");
     actualizarBotonTema();
 });
+
+const botonMenu = document.querySelector("#boton-menu");
+const menu = document.querySelector("#menu");
+const enlacesMenu = document.querySelectorAll(".menu a");
+
+function cerrarMenu() {
+    menu.classList.remove("abierto");
+    botonMenu.textContent = "☰";
+    botonMenu.setAttribute("aria-expanded", "false");
+}
+
+botonMenu.addEventListener("click", function () {
+    menu.classList.toggle("abierto");
+
+    if (menu.classList.contains("abierto")) {
+        botonMenu.textContent = "✕";
+        botonMenu.setAttribute("aria-expanded", "true");
+    } else {
+        cerrarMenu();
+    }
+});
+
+enlacesMenu.forEach(function (enlace) {
+    enlace.addEventListener("click", cerrarMenu);
+});

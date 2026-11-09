@@ -1,4 +1,4 @@
-    :root {
+:root {
     --fondo: #0F1115;
     --tarjeta: #181B22;
     --texto: #E6E8EB;
@@ -101,10 +101,11 @@ h2 {
 
 .encabezado-barra {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding-top: 12px;
-    padding-bottom: 8px;
+    padding-bottom: 12px;
 }
 
 .marca {
@@ -114,8 +115,8 @@ h2 {
 }
 
 .boton-tema,
-.controles .idiomas .boton-idioma {
-    appearance: none;
+.boton-idioma,
+.boton-menu {
     padding: 6px 10px;
     border: 1px solid var(--borde);
     border-radius: 8px;
@@ -127,19 +128,8 @@ h2 {
 }
 
 .boton-tema:hover,
-.controles .idiomas .boton-idioma:hover {
-    border-color: var(--acento);
-    color: var(--acento);
-}
-
-.controles .idiomas .boton-idioma.activo {
-    border-color: var(--acento);
-    background-color: var(--acento);
-    color: var(--texto-boton);
-}
-
-.boton-tema:hover,
-.boton-idioma:hover {
+.boton-idioma:hover,
+.boton-menu:hover {
     border-color: var(--acento);
     color: var(--acento);
 }
@@ -150,22 +140,50 @@ h2 {
     color: var(--texto-boton);
 }
 
+.boton-menu {
+    font-size: 20px;
+}
+
+.menu {
+    display: none;
+    width: 100%;
+    padding-top: 12px;
+}
+
+.menu.abierto {
+    display: block;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
 .menu ul {
     display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding-bottom: 10px;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .menu a {
+    display: block;
+    padding: 10px 0px;
     color: var(--texto-secundario);
-    font-size: 14px;
-    white-space: nowrap;
+    font-size: 16px;
 }
 
 .menu a:hover {
     color: var(--acento);
     text-decoration: none;
+}
+
+.controles {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.idiomas {
+    display: flex;
+    gap: 4px;
 }
 
 .inicio-contenido {
@@ -304,7 +322,6 @@ h2 {
     text-align: center;
 }
 
-/*Tablet y escritorio desde 768px*/
 @media (min-width: 768px) {
     h1 {
         font-size: 48px;
@@ -318,8 +335,33 @@ h2 {
         padding: 80px 0px;
     }
 
+    .boton-menu {
+        display: none;
+    }
+
+    .menu,
+    .menu.abierto {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        width: auto;
+        max-height: none;
+        overflow-y: visible;
+        padding-top: 0px;
+    }
+
     .menu ul {
-        overflow-x: visible;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .menu a {
+        padding: 0px;
+        font-size: 14px;
+    }
+
+    .controles {
+        margin-top: 0px;
     }
 
     .inicio-contenido {
@@ -369,13 +411,34 @@ h2 {
     }
 }
 
-.controles {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+@media (max-height: 500px) and (orientation: landscape) {
+    html {
+        scroll-padding-top: 70px;
+    }
 
-.idiomas {
-    display: flex;
-    gap: 4px;
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        margin-bottom: 16px;
+    }
+
+    .seccion {
+        padding: 32px 0px;
+    }
+
+    .encabezado-barra {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .inicio-contenido {
+        gap: 24px;
+    }
+
+    .foto-perfil {
+        width: 140px;
+        height: 140px;
+    }
 }
